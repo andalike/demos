@@ -1,0 +1,8 @@
+1) sudo apt-get install awscli
+2) aws configure
+3) Create Policy
+4) Add User to Policy (3) above
+5) aws ecr get-login-password --region ap-south-1 | sudo docker login --username AWS --password-stdin 016124700666.dkr.ecr.ap-south-1.amazonaws.com
+6) docker build -t jsp1 .
+7) sudo docker tag jsp1:latest 016124700666.dkr.ecr.ap-south-1.amazonaws.com/jsp1:latest
+8) sudo docker push 016124700666.dkr.ecr.ap-south-1.amazonaws.com/jsp1:latest
